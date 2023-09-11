@@ -55,8 +55,8 @@ app.get("/api", (req, res) => {
     utc_time: time,
     track,
     github_file_url:
-      "https://github.com/husainridwan/hng-internship/blob/main/stage-one/index.js",
-    github_repo_url: "https://github.com/husainridwan/hng-internship",
+      "https://github.com/frankudoags/hng-internship/blob/master/stage-one/index.js",
+    github_repo_url: "https://github.com/frankudoags/hng-internship",
     status_code: 200,
   });
 });
