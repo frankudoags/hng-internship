@@ -1,6 +1,6 @@
 import express from "express";
-import "./db/index";
-import dummyRouter from "./routes/dummyRoute";
+import "./db/db.index";
+import ApiRouter from "./api/api.route";
 
 const app = express();
 const port = 3000;
@@ -12,5 +12,6 @@ app.listen(port, () => {
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-//dummy Route
-app.use("/dummy", dummyRouter);
+
+//api Route
+app.use("/api", ApiRouter);
