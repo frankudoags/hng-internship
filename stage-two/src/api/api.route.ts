@@ -1,5 +1,6 @@
 import { Router } from "express";
-import ApiController from "./api.controller";
+import ApiService from "./api.service";
+import { validateBodyMiddleware } from "../util";
 
 const ApiRouter: Router = Router();
 
@@ -14,7 +15,7 @@ const ApiRouter: Router = Router();
  * 500:
  * description: Internal Server Error
  */
-ApiRouter.get("/", ApiController.getAllPersons);
+ApiRouter.get("/", ApiService.getAllPersons);
 
 /**
  * @swagger
@@ -28,20 +29,7 @@ ApiRouter.get("/", ApiController.getAllPersons);
  * description: Internal Server Error
  */
 
-ApiRouter.post("/", ApiController.createPerson);
-
-/**
- * @swagger
- * /api/{id}:
- * get:
- * description: Get a person by id
- * responses:
- * 200:
- * description: Success
- * 500:
- * description: Internal Server Error
- */
-ApiRouter.get("/:id", ApiController.getPersonById);
+ApiRouter.post("/", validateBodyMiddleware, ApiService.createPerson);
 
 /**
  * @swagger
@@ -54,7 +42,7 @@ ApiRouter.get("/:id", ApiController.getPersonById);
  * 500:
  * description: Internal Server Error
  */
-ApiRouter.get("/:name", ApiController.getPersonByName);
+ApiRouter.get("/:name", ApiService.getPersonByName);
 
 /**
  * @swagger
@@ -67,7 +55,7 @@ ApiRouter.get("/:name", ApiController.getPersonByName);
  * 500:
  * description: Internal Server Error
  */
-ApiRouter.put("/:id", ApiController.updatePerson);
+ApiRouter.put("/:name", validateBodyMiddleware, ApiService.updatePerson);
 
 /**
  * @swagger
@@ -81,6 +69,6 @@ ApiRouter.put("/:id", ApiController.updatePerson);
  * description: Internal Server Error
 
  */
-ApiRouter.delete("/:id", ApiController.deletePerson);
+ApiRouter.delete("/:name", ApiService.deletePerson);
 
 export default ApiRouter;
