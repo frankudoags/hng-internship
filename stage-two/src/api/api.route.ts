@@ -46,9 +46,9 @@ ApiRouter.get("/:name", ApiService.getPersonByName);
 
 /**
  * @swagger
- * /api/{id}:
+ * /api/{name}:
  * put:
- * description: Update a person by id
+ * description: Update a person by name
  * responses:
  * 200:
  * description: Success
@@ -59,9 +59,9 @@ ApiRouter.put("/:name", validateBodyMiddleware, ApiService.updatePerson);
 
 /**
  * @swagger
- * /api/{id}:
+ * /api/{name}:
  * delete:
- * description: Delete a person by id
+ * description: Delete a person by name
  * responses:
  * 200:
  * description: Success
