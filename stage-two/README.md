@@ -1,20 +1,28 @@
-## Typescript Starter-Kit for NodeJS and Express projects
-This is a starter-kit for Node.js and Express projects written in Typescript. It includes a basic setup for a Node.js server with Express and Typescript.
-It follows the MVC pattern and uses the following technologies:
-- Typescript
-- Express
-- Mongoose
-- MongoDB
+# HNG TASK 2 Project with Node JS and Express
 
+CLICK [HERE](https://documenter.getpostman.com/view/28273848/2s9YC4VDBD) TO VIEW THE API DOCUMENTATION
 
 ## Installation
+
 1. Clone the repository
-2. Run `npm install` to install all dependencies
 
+   ```
+   git clone https://github.com/frankudoags/hng-internship
+      cd stage-two
+   ```
 
+2. Run npm install to install all dependencies
 
+```
+npm install
+```
 
-## Usage
-1. Run `npx tsc` to build the project
-2. Run `nodemon .build/index` to start the server in development mode
+3. Create a .env file and populate it using the environment variables defined in .env.example file.
 
+4. Start your Mongo database server and add the MONGO_URI in the .env file.
+
+5. Run npm start to start the server
+
+```
+npm start
+```
