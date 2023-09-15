@@ -1,6 +1,6 @@
 # HNG TASK 2 Project with Node JS and Express
 
-CLICK [HERE](https://documenter.getpostman.com/view/28273848/2s9YC4VDBD) TO VIEW THE API DOCUMENTATION
+CLICK [HERE](https://documenter.getpostman.com/view/21419831/2s9YC5zCkc) TO VIEW THE API DOCUMENTATION AND TESTS
 
 ## Installation
 
